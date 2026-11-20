@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F7F3FB"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Festive Hub"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#6D3BA5"
+            android:layout_marginBottom="8dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back!"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#292333"
+            android:layout_marginBottom="25dp">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="22dp"
+            android:background="@drawable/login_card"
+            android:elevation="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#292333">
+            </TextView>
+
+            <EditText
+                android:id="@+id/edtemail"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Enter your email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:padding="14dp"
+                android:background="@drawable/custom_edittext"
+                android:textSize="14sp"
+                android:textColor="#292333"
+                android:textColorHint="#9990A3"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="18dp">
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#292333">
+            </TextView>
+
+             <EditText
+                android:id="@+id/edtpassword"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:padding="14dp"
+                android:background="@drawable/custom_edittext"
+                android:textSize="14sp"
+                android:textColor="#292333"
+                android:textColorHint="#9990A3"
+                 android:layout_marginTop="8dp">
+             </EditText>
+
+            <TextView
+                android:id="@+id/txtforgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                android:text="Forgot Password?"
+                android:textColor="#6D3BA5"
+                android:textSize="14sp">
+            </TextView>
+
+            <Button
+                android:id="@+id/btnlogin"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="LOGIN"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="@null"
+                android:elevation="2dp">
+            </Button>
+
+            <!-- Sign Up -->
+            <TextView
+                android:id="@+id/txtsignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Don't have an account? Sign Up"
+                android:textColor="#6D3BA5"
+                android:textSize="14sp">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
