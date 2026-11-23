@@ -31,12 +31,14 @@
             </TextView>
 
             <TextView
+                android:id="@+id/txtprofile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Profile"
                 android:textSize="16dp"
                 android:textColor="#7135A5">
             </TextView>
+
         </LinearLayout>
 
         <TextView

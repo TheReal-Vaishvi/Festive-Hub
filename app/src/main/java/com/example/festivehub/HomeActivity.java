@@ -1,5 +1,6 @@
 package com.example.festivehub;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -7,18 +8,23 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.View;
 import androidx.viewpager2.widget.ViewPager2;
 import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
-    TextView txtall, txtmusic, txtfood, txtcelebration;
+    TextView txtall, txtmusic, txtfood, txtcelebration ,txtProfile;
     View lnrgrandfestival, lnrmusicalnight, lnrfoodfestival;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+       txtProfile = findViewById(R.id.txtprofile);
+       txtProfile.setOnClickListener(v->{
+           Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+           startActivity(intent);
+       });
 
         txtall = findViewById(R.id.txtall);
         txtmusic = findViewById(R.id.txtmusic);
