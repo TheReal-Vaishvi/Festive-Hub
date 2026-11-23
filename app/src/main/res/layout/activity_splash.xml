@@ -4,15 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="#9290F3">
+    android:background="#F7F3FB">
 
     <ImageView
         android:id="@+id/imgsplash"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/festive_hub_splash"
-        android:scaleType="fitCenter"
+        android:src="@drawable/splash_screen"
+        android:scaleType="centerCrop"
         />
 
 </LinearLayout>
