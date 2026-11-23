@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F3FB"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/txtbackprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textSize="16dp"
+            android:textColor="#6D3BA5"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="25dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:textColor="#6D3BA5"
+            android:gravity="center"
+            android:layout_marginBottom="25dp">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/forgot_dialog_bg"
+            android:padding="22dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account Settings"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#292333"
+                android:layout_marginBottom="20dp">
+            </TextView>
+
+            <Button
+                android:id="@+id/btnpchangepassword"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Change Password"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="@null">
+            </Button>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
