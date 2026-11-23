@@ -173,6 +173,7 @@
             </ImageView>
 
             <TextView
+                android:id="@+id/txtgrandtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Grand Festival Celebration"
@@ -183,6 +184,7 @@
             </TextView>
 
             <TextView
+                android:id="@+id/txtgrandcategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Music | Food | Celebration"
@@ -192,6 +194,7 @@
             </TextView>
 
             <TextView
+                android:id="@+id/txtgranddate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="25 December 2026 | Rajkot"
@@ -220,6 +223,7 @@
             </ImageView>
 
             <TextView
+                android:id="@+id/txtmusictitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Live Musical Night"
@@ -230,6 +234,7 @@
             </TextView>
 
             <TextView
+                android:id="@+id/txtmusiccategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Music"
@@ -239,6 +244,7 @@
             </TextView>
 
             <TextView
+                android:id="@+id/txtmusicdate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="31 December 2026 | Rajkot"
@@ -269,6 +275,7 @@
             </ImageView>
 
             <TextView
+                android:id="@+id/txtfoodtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Food Festival"
@@ -279,6 +286,7 @@
             </TextView>
 
             <TextView
+                android:id="@+id/txtfoodcategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Food"
@@ -288,9 +296,10 @@
             </TextView>
 
             <TextView
+                android:id="@+id/txtfooddate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="29 December 2026 | Ahmedabad"
+                android:text="27 December 2026 | Ahmedabad"
                 android:textSize="16dp"
                 android:textColor="#8743BE"
                 android:layout_marginTop="8dp">

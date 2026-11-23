@@ -14,13 +14,75 @@ import java.util.ArrayList;
 public class HomeActivity extends AppCompatActivity {
     TextView txtall, txtmusic, txtfood, txtcelebration ,txtProfile;
     View lnrgrandfestival, lnrmusicalnight, lnrfoodfestival;
+    Event grandFestival, musicalNight, foodFestival;
+    TextView txtgrandtitle, txtgrandcategory, txtgranddate;
+    TextView txtmusictitle, txtmusiccategory, txtmusicdate;
+    TextView txtfoodtitle, txtfoodcategory, txtfooddate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-       txtProfile = findViewById(R.id.txtprofile);
+        txtgrandtitle = findViewById(R.id.txtgrandtitle);
+        txtgrandcategory = findViewById(R.id.txtgrandcategory);
+        txtgranddate = findViewById(R.id.txtgranddate);
+
+        txtmusictitle = findViewById(R.id.txtmusictitle);
+        txtmusiccategory = findViewById(R.id.txtmusiccategory);
+        txtmusicdate = findViewById(R.id.txtmusicdate);
+
+        txtfoodtitle = findViewById(R.id.txtfoodtitle);
+        txtfoodcategory = findViewById(R.id.txtfoodcategory);
+        txtfooddate = findViewById(R.id.txtfooddate);
+
+        //sync home and event page detail
+        grandFestival = new Event(
+                R.drawable.grand_festival,
+                "Grand Festival Celebration",
+                "Music | Food | Celebration",
+                "26 December 2026",
+                "6:00 PM – 10:00 PM",
+                "Rajkot",
+                "Celebrate together with music, food, entertainment and exciting activities. " +
+                        "Join us for an unforgettable festival experience!");
+
+        musicalNight = new Event(
+                R.drawable.music_night,
+                "Live Musical Night",
+                "Music",
+                "31 December 2026",
+                "8:00 PM – 11:59 PM",
+                "Rajkot",
+                "Enjoy an unforgettable musical evening with live performances, "
+                        + "amazing melodies and an energetic atmosphere. Join us for a night filled with music and entertainment!");
+
+        foodFestival = new Event(
+                R.drawable.food_stall,
+                "Food Festival",
+                "Food",
+                "27 December 2026",
+                "11:00 AM – 10:00 PM",
+                "Rajkot",
+                "Explore a variety of delicious foods, discover new flavors and enjoy a wonderful food experience. "
+                        + "A perfect destination for food lovers!");
+
+        // Grand Festival
+        txtgrandtitle.setText(grandFestival.title);
+        txtgrandcategory.setText(grandFestival.category);
+        txtgranddate.setText(grandFestival.date + " | " + grandFestival.location);
+
+        // Musical Night
+        txtmusictitle.setText(musicalNight.title);
+        txtmusiccategory.setText(musicalNight.category);
+        txtmusicdate.setText(musicalNight.date + " | " + musicalNight.location);
+
+        // Food Festival
+        txtfoodtitle.setText(foodFestival.title);
+        txtfoodcategory.setText(foodFestival.category);
+        txtfooddate.setText(foodFestival.date + " | " + foodFestival.location);
+
+        txtProfile = findViewById(R.id.txtprofile);
        txtProfile.setOnClickListener(v->{
            Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
            startActivity(intent);
@@ -34,6 +96,22 @@ public class HomeActivity extends AppCompatActivity {
         lnrgrandfestival = findViewById(R.id.lnrgrandfestival);
         lnrmusicalnight = findViewById(R.id.lnrmusicalnight);
         lnrfoodfestival = findViewById(R.id.lnrfoodfestival);
+
+        //open card and view details
+        //grand festival event
+        lnrgrandfestival.setOnClickListener(v -> {
+            openEventDetails(grandFestival);
+        });
+
+        //musical night event
+        lnrmusicalnight.setOnClickListener(v -> {
+            openEventDetails(musicalNight);
+        });
+
+        //food stall
+        lnrfoodfestival.setOnClickListener(v -> {
+            openEventDetails(foodFestival);
+        });
 
         //To display banner(carousel code)
         ViewPager2 viewPagerBanners = findViewById(R.id.viewPager);
@@ -107,6 +185,23 @@ public class HomeActivity extends AppCompatActivity {
             });
         }
 
+    }
+
+    //class to fetch details
+    private void openEventDetails(Event event) {
+
+        Intent intent = new Intent(HomeActivity.this,
+                EventDetailActivity.class);
+
+        intent.putExtra("eventTitle", event.title);
+        intent.putExtra("eventCategory", event.category);
+        intent.putExtra("eventDate", event.date);
+        intent.putExtra("eventTime", event.time);
+        intent.putExtra("eventLocation", event.location);
+        intent.putExtra("eventDescription", event.description);
+        intent.putExtra("eventImage", event.image);
+
+        startActivity(intent);
     }
 
     //For filter the category
