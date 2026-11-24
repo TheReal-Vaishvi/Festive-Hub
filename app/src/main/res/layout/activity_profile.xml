@@ -66,6 +66,19 @@
                 android:backgroundTint="@null">
             </Button>
 
+            <Button
+                android:id="@+id/btnmyregisteredevents"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="15dp"
+                android:text="My Registered Events"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="@null">
+            </Button>
+
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7F3FB"
+    android:padding="24dp"
+    tools:context=".RegisteredEventsActivity">
+
+    <TextView
+        android:id="@+id/txtbackregisteredevents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textSize="16sp"
+        android:textColor="#6D3BA5"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="25dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Registered Events"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#6D3BA5"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage the events you've joined"
+        android:textSize="14sp"
+        android:textColor="#51465F"
+        android:gravity="center"
+        android:layout_marginBottom="25dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtregisteredcount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Registrations"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#292333"
+        android:layout_marginBottom="15dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtnoregisteredevents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No registered events yet!"
+        android:textSize="16sp"
+        android:textColor="#51465F"
+        android:gravity="center"
+        android:padding="30dp"
+        android:visibility="gone">
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerregisteredevents"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp"
+        tools:listitem="@layout/item_registered_event">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

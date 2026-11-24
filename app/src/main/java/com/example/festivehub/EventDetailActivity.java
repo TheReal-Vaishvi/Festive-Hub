@@ -117,6 +117,7 @@ public class EventDetailActivity extends AppCompatActivity {
                     registration.put("eventTitle", title);
                     registration.put("eventDate", date);
                     registration.put("status", "Registered");
+                    registration.put("ticketCount",1);
                     registration.put("registeredAt", FieldValue.serverTimestamp());
 
                     // Save registration in Firestore
