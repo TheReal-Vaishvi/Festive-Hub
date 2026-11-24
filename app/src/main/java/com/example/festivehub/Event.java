@@ -2,10 +2,12 @@ package com.example.festivehub;
 
 public class Event {
     int image;
-    String title, category, date, time, location, description;
+    String id, title, category, date, time, location, description;
 
-    public Event(int image, String title, String category, String date,
+    public Event(String id, int image, String title, String category, String date,
                  String time, String location, String description){
+
+        this.id = id;
         this.image = image;
         this.title = title;
         this.category = category;

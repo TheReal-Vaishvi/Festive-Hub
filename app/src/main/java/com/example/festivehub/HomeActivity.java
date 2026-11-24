@@ -38,6 +38,7 @@ public class HomeActivity extends AppCompatActivity {
 
         //sync home and event page detail
         grandFestival = new Event(
+                "grand_festival",
                 R.drawable.grand_festival,
                 "Grand Festival Celebration",
                 "Music | Food | Celebration",
@@ -48,6 +49,7 @@ public class HomeActivity extends AppCompatActivity {
                         "Join us for an unforgettable festival experience!");
 
         musicalNight = new Event(
+                "musical_event",
                 R.drawable.music_night,
                 "Live Musical Night",
                 "Music",
@@ -58,6 +60,7 @@ public class HomeActivity extends AppCompatActivity {
                         + "amazing melodies and an energetic atmosphere. Join us for a night filled with music and entertainment!");
 
         foodFestival = new Event(
+                "food_stall",
                 R.drawable.food_stall,
                 "Food Festival",
                 "Food",
@@ -83,7 +86,8 @@ public class HomeActivity extends AppCompatActivity {
         txtfooddate.setText(foodFestival.date + " | " + foodFestival.location);
 
         txtProfile = findViewById(R.id.txtprofile);
-       txtProfile.setOnClickListener(v->{
+
+        txtProfile.setOnClickListener(v->{
            Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
            startActivity(intent);
        });
@@ -184,7 +188,6 @@ public class HomeActivity extends AppCompatActivity {
                 filterEvents(category);
             });
         }
-
     }
 
     //class to fetch details
@@ -193,6 +196,7 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(HomeActivity.this,
                 EventDetailActivity.class);
 
+        intent.putExtra("eventId",event.id);
         intent.putExtra("eventTitle", event.title);
         intent.putExtra("eventCategory", event.category);
         intent.putExtra("eventDate", event.date);
