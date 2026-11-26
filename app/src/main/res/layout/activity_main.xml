@@ -129,16 +129,56 @@
                 android:textSize="14sp">
             </TextView>
 
+            <!-- Other Login Options -->
             <TextView
-                android:id="@+id/txtadminlogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:text="Admin Login"
-                android:textColor="#6D3BA5"
-                android:textSize="14sp">
-            </TextView>
+                android:layout_marginTop="20dp"
+                android:text="Other Login Options"
+                android:textColor="#9990A3"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/txtadminlogin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Admin Login"
+                    android:textColor="#6D3BA5"
+                    android:textSize="14sp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:background="#D8CDE5">
+                </View>
+
+                <TextView
+                    android:id="@+id/txtvolunteerlogin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Volunteer Login"
+                    android:textColor="#6D3BA5"
+                    android:textSize="14sp"
+                    android:textStyle="bold">
+                </TextView>
+
+            </LinearLayout>
 
         </LinearLayout>
 
