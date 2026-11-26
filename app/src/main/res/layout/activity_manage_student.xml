@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F7F3FB"
+    android:layout_marginTop="15dp"
+    tools:context=".ManageStudentActivity">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage Students"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#222222"
+        android:layout_marginTop="10dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View and manage registered student"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="#777777"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edtSearchstudent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Search by name or email"
+        android:padding="12dp"
+        android:textColor="#222222"
+        android:textColorHint="#777777"
+        android:background="@drawable/custom_edittext"
+        android:singleLine="true">
+    </EditText>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvstudents"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="14dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

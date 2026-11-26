@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F3FB"
+    android:fillViewport="true"
+    tools:context=".AddEditCollegeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/txtclgFormTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add College"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#292333"
+            android:layout_marginBottom="24dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="College Name"
+            android:textStyle="bold"
+            android:textColor="#292333">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edtclgName"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Enter college name"
+            android:inputType="textCapWords"
+            android:background="@drawable/custom_edittext"
+            android:padding="14dp"
+            android:textColor="#292333"
+            android:textColorHint="#9990A3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp">
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:textStyle="bold"
+            android:textColor="#292333">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edtclgCity"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Enter city"
+            android:inputType="textCapWords"
+            android:background="@drawable/custom_edittext"
+            android:padding="14dp"
+            android:textColor="#292333"
+            android:textColorHint="#9990A3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp">
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State"
+            android:textStyle="bold"
+            android:textColor="#292333">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edtclgState"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Enter state"
+            android:inputType="textCapWords"
+            android:background="@drawable/custom_edittext"
+            android:padding="14dp"
+            android:textColor="#292333"
+            android:textColorHint="#9990A3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp">
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="College Address"
+            android:textStyle="bold"
+            android:textColor="#292333">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edtclgAddress"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Enter complete college address"
+            android:inputType="textMultiLine|textCapSentences"
+            android:gravity="top"
+            android:background="@drawable/custom_edittext"
+            android:padding="14dp"
+            android:textColor="#292333"
+            android:textColorHint="#9990A3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="24dp">
+        </EditText>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSaveCollege"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Save College"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="@null"
+            android:elevation="4dp">
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F7F3FB"
+    android:fillViewport="true"
+    android:layout_marginTop="10dp"
+    tools:context=".EditStudentActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Student Details"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student Name"
+        android:textColor="#333333"
+        android:padding="5dp"
+        android:textStyle="bold">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edtStudentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter student name"
+        android:inputType="textPersonName"
+        android:background="@drawable/custom_edittext"
+        android:padding="14dp"
+        android:layout_marginBottom="18dp">
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mobile Number"
+        android:padding="5dp"
+        android:textColor="#333333"
+        android:textStyle="bold">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edtStudentMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter mobile number"
+        android:background="@drawable/custom_edittext"
+        android:padding="14dp"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:layout_marginBottom="24dp">
+    </EditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnUpdateStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Student"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:elevation="5dp"
+        android:textSize="14dp"
+        android:background="@drawable/custom_button"
+        android:backgroundTint="@null">
+    </androidx.appcompat.widget.AppCompatButton>
+
+</LinearLayout>
+</ScrollView>

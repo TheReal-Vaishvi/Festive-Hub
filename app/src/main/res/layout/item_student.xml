@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtstudentname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#222222">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtstudentemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="student@email.com"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="6dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtstudentmobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp">
+        </TextView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnviewstudent"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:textAllCaps="false"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:textColor="#FFFFFF"
+            android:text="View Details"
+            android:textSize="13dp"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="@null"
+            android:elevation="2dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp">
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btneditstudent"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:text="Edit Details"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="@null"
+            android:elevation="2dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp">
+        </androidx.appcompat.widget.AppCompatButton>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btndeletestudent"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:text="Remove Student"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="@null"
+            android:elevation="2dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp">
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

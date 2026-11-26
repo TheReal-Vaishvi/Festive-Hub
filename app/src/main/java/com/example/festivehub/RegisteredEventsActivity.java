@@ -18,10 +18,8 @@ public class RegisteredEventsActivity extends AppCompatActivity {
 
     TextView txtbackregisteredevents, txtregisteredcount, txtnoregisteredevents;
     RecyclerView recyclerregisteredevents;
-
     FirebaseAuth auth;
     FirebaseFirestore db;
-
     ArrayList<EventRegistration> eventList;
     RegisteredEventsAdapter adapter;
 

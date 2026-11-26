@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="5dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/imgevent"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#D0A0E0"
+            android:scaleType="centerCrop"
+            android:contentDescription="Event banner">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txthomeeventtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Event Title"
+            android:textColor="#222222"
+            android:textSize="20sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txthomeeventcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Event Category"
+            android:textColor="#8743BE"
+            android:textSize="16sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txthomeeventdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Event Date | Location"
+            android:textColor="#8743BE"
+            android:textSize="16sp">
+        </TextView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

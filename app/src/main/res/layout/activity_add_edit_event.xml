@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addEventsScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F3FB"
+    android:forceDarkAllowed="false"
+    android:clipToPadding="false"
+    tools:context=".AddEditEventActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Event"
+            android:textColor="#6D3BA5"
+            android:textSize="25sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:text="Enter the details of your event"
+            android:textColor="#777777"
+            android:textSize="14sp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edteventtitle"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Event Title"
+            android:inputType="textCapSentences"
+            android:padding="12dp"
+            android:textColor="#222222"
+            android:textColorHint="#777777"
+            android:background="@android:drawable/edit_text">
+        </EditText>
+
+        <EditText
+            android:id="@+id/edteventcategory"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:hint="Event Category"
+            android:inputType="textCapSentences"
+            android:padding="12dp"
+            android:textColor="#222222"
+            android:textColorHint="#777777"
+            android:background="@android:drawable/edit_text">
+        </EditText>
+
+        <EditText
+            android:id="@+id/edteventdate"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:hint="Event Date"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="#222222"
+            android:textColorHint="#777777"
+            android:background="@android:drawable/edit_text">
+        </EditText>
+
+        <EditText
+            android:id="@+id/edteventtime"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:hint="Event Time"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="#222222"
+            android:textColorHint="#777777"
+            android:background="@android:drawable/edit_text">
+        </EditText>
+
+        <EditText
+            android:id="@+id/edteventlocation"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:hint="Event Location"
+            android:inputType="textCapWords"
+            android:padding="12dp"
+            android:textColor="#222222"
+            android:textColorHint="#777777"
+            android:background="@android:drawable/edit_text">
+        </EditText>
+
+        <EditText
+            android:id="@+id/edteventdescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="12dp"
+            android:hint="Event Description"
+            android:gravity="top"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="12dp"
+            android:textColor="#222222"
+            android:textColorHint="#777777"
+            android:background="@android:drawable/edit_text">
+        </EditText>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnsaveevent"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="25dp"
+            android:text="Save Event"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="#6D3BA5">
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+</ScrollView>

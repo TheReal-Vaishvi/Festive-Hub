@@ -2,9 +2,11 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:fillViewport="true"
     android:background="#F7F3FB"
-    android:scrollbars="none">
+    android:scrollbars="none"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -102,7 +104,7 @@
                 android:textSize="14sp">
             </TextView>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnlogin"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
@@ -113,7 +115,7 @@
                 android:background="@drawable/custom_button"
                 android:backgroundTint="@null"
                 android:elevation="2dp">
-            </Button>
+            </androidx.appcompat.widget.AppCompatButton>
 
             <!-- Sign Up -->
             <TextView
@@ -123,6 +125,17 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:text="Don't have an account? Sign Up"
+                android:textColor="#6D3BA5"
+                android:textSize="14sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtadminlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="Admin Login"
                 android:textColor="#6D3BA5"
                 android:textSize="14sp">
             </TextView>

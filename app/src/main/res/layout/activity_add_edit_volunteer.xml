@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F7F3FB"
+    android:fillViewport="true"
+    android:layout_marginTop="15dp"
+    tools:context=".AddEditVolunteerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/txtVolunteerFormTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Volunteer"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#292333"
+            android:layout_marginBottom="24dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volunteer Name"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="#292333">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edtVolunteerName"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Enter volunteer name"
+            android:background="@drawable/custom_edittext"
+            android:elevation="4dp"
+            android:padding="14dp"
+            android:inputType="textPersonName"
+            android:textSize="14dp"
+            android:textColor="#292333"
+            android:textColorHint="#9990A3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp">
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="#292333">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edtVolunteerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/custom_edittext"
+            android:hint="Enter email"
+            android:elevation="4dp"
+            android:padding="14dp"
+            android:textColor="#292333"
+            android:textColorHint="#9990A3"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp">
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:textColor="#292333">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edtVolunteerMobile"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Enter 10-digit mobile number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:background="@drawable/custom_edittext"
+            android:elevation="4dp"
+            android:padding="14dp"
+            android:textColor="#292333"
+            android:textColorHint="#9990A3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp">
+        </EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="College Name"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:textColor="#292333">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edtVolunteerCollege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter college name"
+            android:inputType="textCapWords"
+            android:background="@drawable/custom_edittext"
+            android:elevation="4dp"
+            android:padding="14dp"
+            android:textColor="#292333"
+            android:textColorHint="#9990A3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="24dp">
+        </EditText>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSaveVolunteer"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Save Volunteer"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="@null"
+            android:elevation="4dp">
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+</ScrollView>
+

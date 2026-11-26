@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText edtemail, edtpassword;
     Button btnlogin;
-    TextView txtsignup, txtforgotpassword;
+    TextView txtsignup, txtforgotpassword, txtadminlogin;
 
     FirebaseAuth auth;
 
@@ -34,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
         btnlogin = findViewById(R.id.btnlogin);
         txtsignup = findViewById(R.id.txtsignup);
         txtforgotpassword = findViewById(R.id.txtforgotPassword);
+
+        txtadminlogin = findViewById(R.id.txtadminlogin);
+
+        txtadminlogin.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, AdminLoginActivity.class);
+            startActivity(intent);
+        });
 
         txtforgotpassword.setOnClickListener(new View.OnClickListener() {
             @Override

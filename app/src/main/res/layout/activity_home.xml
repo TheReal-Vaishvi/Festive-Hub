@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F5FC"
+    android:fillViewport="true"
     android:scrollbars="none"
     tools:context=".HomeActivity">
 
@@ -18,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal">
 
             <TextView
@@ -85,62 +88,12 @@
             android:scrollbars="none">
 
             <LinearLayout
+                android:id="@+id/categoryContainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="All"
-                    android:gravity="center"
-                    android:paddingLeft="18dp"
-                    android:paddingRight="18dp"
-                    android:background="@drawable/selected_category"
-                    android:textColor="#FFFFFF">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/txtmusic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="Music"
-                    android:gravity="center"
-                    android:paddingLeft="18dp"
-                    android:paddingRight="18dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/unselected_category"
-                    android:textColor="#8743BE">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/txtfood"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="Food"
-                    android:gravity="center"
-                    android:paddingLeft="18dp"
-                    android:paddingRight="18dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/unselected_category"
-                    android:textColor="#8743BE">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/txtcelebration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="Celebration"
-                    android:gravity="center"
-                    android:paddingLeft="18dp"
-                    android:paddingRight="18dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/unselected_category"
-                    android:textColor="#8743BE">
-                </TextView>
-
             </LinearLayout>
+
         </HorizontalScrollView>
 
         <TextView
@@ -154,158 +107,13 @@
             android:layout_marginBottom="15dp">
         </TextView>
 
-        <LinearLayout
-            android:id="@+id/lnrgrandfestival"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewhomeevents"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/login_card"
-            android:padding="15dp"
-            android:elevation="5dp"
-            android:layout_marginBottom="15dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:background="#D0A0E0"
-                android:scaleType="centerCrop"
-                android:src="@drawable/grand_festival">
-            </ImageView>
-
-            <TextView
-                android:id="@+id/txtgrandtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Grand Festival Celebration"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_marginTop="10dp">
-            </TextView>
-
-            <TextView
-                android:id="@+id/txtgrandcategory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Music | Food | Celebration"
-                android:textSize="16dp"
-                android:textColor="#8743BE"
-                android:layout_marginTop="10dp">
-            </TextView>
-
-            <TextView
-                android:id="@+id/txtgranddate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="25 December 2026 | Rajkot"
-                android:textSize="16dp"
-                android:textColor="#8743BE"
-                android:layout_marginTop="8dp">
-            </TextView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lnrmusicalnight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/login_card"
-            android:padding="15dp"
-            android:elevation="5dp"
-            android:layout_marginBottom="15dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:background="#D0A0E0"
-                android:scaleType="centerCrop"
-                android:src="@drawable/music_night">
-            </ImageView>
-
-            <TextView
-                android:id="@+id/txtmusictitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Live Musical Night"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_marginTop="10dp">
-            </TextView>
-
-            <TextView
-                android:id="@+id/txtmusiccategory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Music"
-                android:textSize="16dp"
-                android:textColor="#8743BE"
-                android:layout_marginTop="10dp">
-            </TextView>
-
-            <TextView
-                android:id="@+id/txtmusicdate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="31 December 2026 | Rajkot"
-                android:textSize="16dp"
-                android:textColor="#8743BE"
-                android:layout_marginTop="8dp">
-            </TextView>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/lnrfoodfestival"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/login_card"
-            android:padding="15dp"
-            android:elevation="5dp"
-            android:layout_marginBottom="15dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:background="#D0A0E0"
-                android:scaleType="centerCrop"
-                android:src="@drawable/food_stall">
-            </ImageView>
-
-            <TextView
-                android:id="@+id/txtfoodtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Food Festival"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_marginTop="10dp">
-            </TextView>
-
-            <TextView
-                android:id="@+id/txtfoodcategory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Food"
-                android:textSize="16dp"
-                android:textColor="#8743BE"
-                android:layout_marginTop="10dp">
-            </TextView>
-
-            <TextView
-                android:id="@+id/txtfooddate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="27 December 2026 | Ahmedabad"
-                android:textSize="16dp"
-                android:textColor="#8743BE"
-                android:layout_marginTop="8dp">
-            </TextView>
-
-        </LinearLayout>
-
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false"
+            android:paddingBottom="10dp">
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
