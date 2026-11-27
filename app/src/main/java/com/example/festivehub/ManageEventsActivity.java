@@ -64,6 +64,8 @@ public class ManageEventsActivity extends AppCompatActivity {
                         String description = document.getString("description");
 
                         Event event = new Event(id, 0, title, category, date, time, location, description);
+                        //for image read
+                        event.imageUrl = document.getString("imageUrl");
                         eventList.add(event);
                     }
                     adapter.notifyDataSetChanged();

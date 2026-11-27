@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/addEventsScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F7F3FB"
     android:forceDarkAllowed="false"
+    android:layout_marginTop="15dp"
     android:clipToPadding="false"
     tools:context=".AddEditEventActivity">
 
@@ -36,10 +36,66 @@
             android:textSize="14sp">
         </TextView>
 
+        <!-- Image -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Banner / Image"
+            android:textColor="#292333"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imgeventpreview"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#E8E0F0"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:contentDescription="Event image preview">
+        </ImageView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnchooseimage"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:text="Choose Event Image"
+            android:textColor="#6D3BA5"
+            android:textStyle="bold"
+            android:backgroundTint="#E8DDF3"
+            android:background="@drawable/custom_button"
+            android:backgroundTintMode="src_in">
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <ProgressBar
+            android:id="@+id/progressimageupload"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="12dp"
+            android:indeterminate="true"
+            android:visibility="gone">
+        </ProgressBar>
+
+        <TextView
+            android:id="@+id/txtimageuploadstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text=""
+            android:textColor="#6D3BA5"
+            android:textSize="12sp">
+        </TextView>
+
+        <!-- Details -->
         <EditText
             android:id="@+id/edteventtitle"
             android:layout_width="match_parent"
             android:layout_height="55dp"
+            android:layout_marginTop="15dp"
             android:hint="Event Title"
             android:inputType="textCapSentences"
             android:padding="12dp"
@@ -122,7 +178,8 @@
             android:text="Save Event"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:backgroundTint="#6D3BA5">
+            android:background="@drawable/custom_button"
+            android:backgroundTint="@null">
         </androidx.appcompat.widget.AppCompatButton>
 
     </LinearLayout>

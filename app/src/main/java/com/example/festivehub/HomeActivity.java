@@ -102,10 +102,15 @@ public class HomeActivity extends AppCompatActivity {
                                 location,
                                 description
                         );
+                        //it get img url from firebase firestore
+                        event.imageUrl = document.getString("imageUrl");
                         eventList.add(event);
                         // Add event to carousel
+                        String imageUrl = document.getString("imageUrl");
+
                         bannerList.add(new EventBanner(
                                 image,
+                                imageUrl,
                                 title,
                                 category
                         ));
@@ -198,10 +203,7 @@ public class HomeActivity extends AppCompatActivity {
             categoryButton.setIncludeFontPadding(true);
 
             LinearLayout.LayoutParams params =
-                    new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.WRAP_CONTENT,
-                            dp(42)
-                    );
+                    new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,dp(42));
             if (i > 0) {params.setMargins(10, 0, 0, 0);}
             categoryButton.setLayoutParams(params);
             if (i == 0) {
@@ -226,7 +228,6 @@ public class HomeActivity extends AppCompatActivity {
             });
             categoryContainer.addView(categoryButton);
         }
-
         // Display all events initially
         filterEvents("All");
     }

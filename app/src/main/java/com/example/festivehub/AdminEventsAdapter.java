@@ -49,6 +49,7 @@ public class AdminEventsAdapter extends RecyclerView.Adapter<AdminEventsAdapter.
             intent.putExtra("eventTime", event.time);
             intent.putExtra("eventLocation", event.location);
             intent.putExtra("eventDescription", event.description);
+            intent.putExtra("eventImageUrl",event.imageUrl);
 
             holder.itemView.getContext().startActivity(intent);
         });

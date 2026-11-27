@@ -48,4 +48,8 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore")
 
     implementation("androidx.viewpager2:viewpager2:1.1.0") //for carousel
+
+    implementation("com.cloudinary:cloudinary-android:3.1.3")//connect cloudinary
+
+    implementation("com.github.bumptech.glide:glide:4.16.0")//Glide
 }

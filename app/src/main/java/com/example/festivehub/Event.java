@@ -2,7 +2,7 @@ package com.example.festivehub;
 
 public class Event {
     int image;
-    String id, title, category, date, time, location, description;
+    String id, title, category, date, time, location, description, imageUrl;
 
     public Event(String id, int image, String title, String category, String date,
                  String time, String location, String description){
@@ -15,5 +15,6 @@ public class Event {
         this.time = time;
         this.location = location;
         this.description = description;
+        this.imageUrl = "";
     }
 }

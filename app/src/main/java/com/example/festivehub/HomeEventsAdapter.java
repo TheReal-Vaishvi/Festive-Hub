@@ -39,8 +39,14 @@ public class HomeEventsAdapter extends RecyclerView.Adapter<HomeEventsAdapter.Ev
         holder.txthomeeventcategory.setText(event.category);
         holder.txthomeeventdate.setText(event.date + " | " + event.location);
 
-        if (event.image != 0) {
+        if (event.imageUrl != null && !event.imageUrl.isEmpty()) {
+            com.bumptech.glide.Glide.with(context)
+                    .load(event.imageUrl)
+                    .placeholder(android.R.color.darker_gray)
+                    .into(holder.imgevent);
+        } else if (event.image != 0) {
             holder.imgevent.setImageResource(event.image);
+
         } else {
             holder.imgevent.setImageResource(android.R.color.darker_gray);
         }
@@ -56,6 +62,7 @@ public class HomeEventsAdapter extends RecyclerView.Adapter<HomeEventsAdapter.Ev
             intent.putExtra("eventLocation", event.location);
             intent.putExtra("eventDescription", event.description);
             intent.putExtra("eventImage", event.image);
+            intent.putExtra("eventImageUrl",event.imageUrl);
 
             context.startActivity(intent);
         });
