@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    android:elevation="3dp">
+
+    <TextView
+        android:id="@+id/txtTitleassignment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tech Fest 2027"
+        android:textColor="#6D3BA5"
+        android:textSize="19sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtdateassignment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Date: 14 January 2027"
+        android:textColor="#444444"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtTimeassignment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Time: 10:00 AM - 5:00 PM"
+        android:textColor="#444444"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtlocationassignment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Location: Rajkot"
+        android:textColor="#444444"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtstatusassignment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Status: Assigned"
+        android:textColor="#388E3C"
+        android:textSize="14sp"
+        android:textStyle="bold">
+    </TextView>
+
+</LinearLayout>

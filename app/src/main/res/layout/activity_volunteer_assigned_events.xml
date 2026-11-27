@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#F7F3FB"
+    android:layout_marginTop="25dp"
+    tools:context=".VolunteerAssignedEventsActivity">
+
+<TextView
+    android:id="@+id/txtbackassigned"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:text="Back"
+    android:textColor="#6D3BA5"
+    android:textSize="16sp"
+    android:textStyle="bold">
+</TextView>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="18dp"
+    android:layout_marginEnd="18dp"
+    android:text="My Assigned Events"
+    android:textColor="#6D3BA5"
+    android:textSize="24sp"
+    android:textStyle="bold">
+</TextView>
+
+<TextView
+    android:id="@+id/txtassignedcount"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="18dp"
+    android:layout_marginTop="12dp"
+    android:text="Total Assigned Events: 0"
+    android:textColor="#444444"
+    android:textSize="15sp"
+    android:textStyle="bold">
+</TextView>
+
+<TextView
+    android:id="@+id/txtnoassignedevents"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="25dp"
+    android:text="No events have been assigned to you yet."
+    android:textColor="#777777"
+    android:textSize="15sp"
+    android:visibility="gone">
+</TextView>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerviewassignedevents"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="false"
+    android:paddingTop="10dp"
+    android:paddingBottom="15dp">
+</androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

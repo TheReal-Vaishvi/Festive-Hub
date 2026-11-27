@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F7F3FB"
+    android:layout_marginTop="25dp"
+    android:fillViewport="true"
+    tools:context=".AssignVolunteerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="25dp">
+
+        <TextView
+            android:id="@+id/txtbackassign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Back"
+            android:textColor="#6D3BA5"
+            android:textSize="16sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:text="Assign Volunteer"
+            android:textColor="#6D3BA5"
+            android:textSize="24sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="25dp"
+            android:text="Select Event"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <Spinner
+            android:id="@+id/spinnerassignevent"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="7dp"
+            android:background="#FFFFFF"
+            android:spinnerMode="dialog"
+            android:paddingStart="10dp">
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="22dp"
+            android:text="Select Volunteer"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <Spinner
+            android:id="@+id/spinnervolunteer"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="7dp"
+            android:background="#FFFFFF"
+            android:spinnerMode="dialog"
+            android:paddingStart="10dp">
+        </Spinner>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnvolunteerassign"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="30dp"
+            android:text="Assign Volunteer"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="@null">
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+</ScrollView>

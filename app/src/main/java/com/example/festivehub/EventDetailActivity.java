@@ -2,6 +2,7 @@ package com.example.festivehub;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -39,29 +40,31 @@ public class EventDetailActivity extends AppCompatActivity {
         txteventtime = findViewById(R.id.txteventtime);
         txteventlocation = findViewById(R.id.txteventlocation);
         txtdescription = findViewById(R.id.txteventdescription);
+
         btnregisterevent = findViewById(R.id.btnregisterevent);
+        btnviewschedule = findViewById(R.id.btnviewschedule);
 
         auth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
-        //schedule
-        btnviewschedule = findViewById(R.id.btnviewschedule);
+        // Initially hide both buttons until user role is checked
+        btnregisterevent.setVisibility(View.GONE);
+        btnviewschedule.setVisibility(View.GONE);
 
+        // Schedule button
         btnviewschedule.setOnClickListener(v -> {
             Intent intent = new Intent(EventDetailActivity.this, EventScheduleActivity.class);
-
             intent.putExtra("eventId", getIntent().getStringExtra("eventId"));
             intent.putExtra("eventTitle", getIntent().getStringExtra("eventTitle"));
             intent.putExtra("eventDate", getIntent().getStringExtra("eventDate"));
 
             startActivity(intent);
         });
-
         Intent intent = getIntent();
-
         eventId = intent.getStringExtra("eventId");
         title = intent.getStringExtra("eventTitle");
         date = intent.getStringExtra("eventDate");
+
         String category = intent.getStringExtra("eventCategory");
         String time = intent.getStringExtra("eventTime");
         String location = intent.getStringExtra("eventLocation");
@@ -85,19 +88,57 @@ public class EventDetailActivity extends AppCompatActivity {
                     .placeholder(android.R.drawable.ic_menu_gallery)
                     .error(android.R.drawable.ic_menu_gallery)
                     .into(imgeventdetail);
-        } else if (image != 0) {
-            imgeventdetail.setImageResource(image);
-        } else {
-            imgeventdetail.setImageResource(
-                    android.R.drawable.ic_menu_gallery
-            );
         }
-
+        else if (image != 0) {
+            imgeventdetail.setImageResource(image);
+        }
+        else {
+            imgeventdetail.setImageResource(android.R.drawable.ic_menu_gallery);
+        }
         // Back button
         txtbackevent.setOnClickListener(v -> finish());
+
         // Register button
         btnregisterevent.setOnClickListener(v -> registerForEvent());
-        checkRegistrationStatus();
+        // Check whether logged-in user is a student or volunteer
+        checkUserRole();
+    }
+    // Check user role and show the appropriate button
+    private void checkUserRole() {
+        if (auth.getCurrentUser() == null) {
+            return;
+        }
+        String email = auth.getCurrentUser().getEmail();
+        if (email == null || email.trim().isEmpty()) {
+            Toast.makeText(this, "Unable to identify user", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        db.collection("Volunteers")
+                .whereEqualTo("email", email)
+                .limit(1)
+                .get()
+                .addOnSuccessListener(querySnapshot -> {
+                    if (isFinishing() || isDestroyed()) {
+                        return;
+                    }
+                    if (!querySnapshot.isEmpty()) {
+                        // Volunteer: Show schedule, hide registration
+                        btnregisterevent.setVisibility(View.GONE);
+                        btnviewschedule.setVisibility(View.VISIBLE);
+                    }
+                    else {
+                        // Student: Show registration, hide schedule
+                        btnregisterevent.setVisibility(View.VISIBLE);
+                        btnviewschedule.setVisibility(View.GONE);
+                        // Check existing registration
+                        checkRegistrationStatus();
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    btnregisterevent.setVisibility(View.GONE);
+                    btnviewschedule.setVisibility(View.GONE);
+                    Toast.makeText(this, "Unable to check user role: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                });
     }
     // Set button after successful registration or existing registration
     private void setRegisteredState() {
@@ -127,13 +168,15 @@ public class EventDetailActivity extends AppCompatActivity {
 
         String userId = auth.getCurrentUser().getUid();
         String registrationId = userId + "_" + eventId;
+
         db.collection("EventRegistrations")
                 .document(registrationId)
                 .get()
                 .addOnSuccessListener(documentSnapshot -> {
                     if (documentSnapshot.exists()) {
                         setRegisteredState();
-                    } else {
+                    }
+                    else {
                         setRegisterState();
                     }
                 })
@@ -152,7 +195,6 @@ public class EventDetailActivity extends AppCompatActivity {
             Toast.makeText(this, "Event information is missing", Toast.LENGTH_SHORT).show();
             return;
         }
-
         String userId = auth.getCurrentUser().getUid();
         String registrationId = userId + "_" + eventId;
 
