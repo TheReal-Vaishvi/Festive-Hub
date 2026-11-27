@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    android:elevation="3dp">
+
+    <TextView
+        android:id="@+id/txtnameregistered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student Name"
+        android:textColor="#6D3BA5"
+        android:textSize="18sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtemailregistered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Email"
+        android:textColor="#444444"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtmobileregistered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Mobile"
+        android:textColor="#444444"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtTicketregistered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Tickets Booked: 1"
+        android:textColor="#444444"
+        android:textSize="14sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtstatusregistered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Status: Registered"
+        android:textColor="#388E3C"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtdateregistered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Registered On"
+        android:textColor="#777777"
+        android:textSize="13sp">
+    </TextView>
+
+</LinearLayout>

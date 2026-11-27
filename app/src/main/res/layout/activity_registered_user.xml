@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:orientation="vertical"
+     android:background="#F7F3FB"
+     android:layout_marginTop="25dp"
+     tools:context=".RegisteredUserActivity">
+
+<TextView
+    android:id="@+id/txtregisteredback"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:padding="15dp"
+    android:text="Back"
+    android:textColor="#6D3BA5"
+    android:textSize="16sp"
+    android:textStyle="bold">
+</TextView>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="18dp"
+    android:layout_marginEnd="18dp"
+    android:layout_marginTop="5dp"
+    android:text="Registered Users"
+    android:textColor="#6D3BA5"
+    android:textSize="24sp"
+    android:textStyle="bold">
+</TextView>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="18dp"
+    android:layout_marginTop="18dp"
+    android:text="Select Event"
+    android:textColor="#333333"
+    android:textSize="15sp"
+    android:textStyle="bold">
+</TextView>
+
+ <Spinner
+     android:id="@+id/spinnerevents"
+     android:layout_width="match_parent"
+     android:layout_height="55dp"
+     android:layout_marginStart="18dp"
+     android:layout_marginEnd="18dp"
+     android:layout_marginTop="5dp"
+     android:background="#FFFFFF"
+     android:paddingStart="10dp"
+     android:spinnerMode="dialog">
+ </Spinner>
+
+<TextView
+    android:id="@+id/txttotalregistered"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="18dp"
+    android:layout_marginTop="18dp"
+    android:layout_marginBottom="5dp"
+    android:text="Total Registered Users: 0"
+    android:textColor="#6D3BA5"
+    android:textSize="16sp"
+    android:textStyle="bold">
+</TextView>
+
+<TextView
+    android:id="@+id/txtnoregisterusers"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="25dp"
+    android:text="No users registered for this event."
+    android:textColor="#777777"
+    android:textSize="15sp"
+    android:visibility="gone">
+</TextView>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvregisteredusers"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="false"
+    android:paddingBottom="10dp">
+</androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

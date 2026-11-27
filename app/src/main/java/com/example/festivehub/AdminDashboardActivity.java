@@ -12,7 +12,7 @@ import androidx.appcompat.widget.AppCompatButton;
 
 
 public class AdminDashboardActivity extends AppCompatActivity {
-    Button btnmanageevents, btnmanagestudents, btnmanagevolunteers, btnmanagecolleges, btnmanagenotifications, btnadminlogout;
+    Button btnmanageevents, btnmanagestudents, btnmanagevolunteers, btnmanagecolleges, btnmanagenotifications, btnadminlogout, btnregisteruser;
     FirebaseAuth auth;
 
     @Override
@@ -51,6 +51,12 @@ public class AdminDashboardActivity extends AppCompatActivity {
         AppCompatButton btnManageNotifications = findViewById(R.id.btnmanagenotifications);
         btnManageNotifications.setOnClickListener(v -> {
             Intent intent = new Intent(AdminDashboardActivity.this, ManageNotificationActivity.class);
+            startActivity(intent);
+        });
+        //registered user
+        btnregisteruser = findViewById(R.id.btnregisteruser);
+        btnregisteruser.setOnClickListener(v -> {
+            Intent intent = new Intent(AdminDashboardActivity.this, RegisteredUserActivity.class);
             startActivity(intent);
         });
 

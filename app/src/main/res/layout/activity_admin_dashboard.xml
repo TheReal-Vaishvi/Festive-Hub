@@ -51,6 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_button"
+                android:textSize="16dp"
                 android:text="Manage Events">
             </androidx.appcompat.widget.AppCompatButton>
 
@@ -59,6 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
+                android:textSize="16dp"
                 android:background="@drawable/custom_button"
                 android:text="Manage Students">
             </androidx.appcompat.widget.AppCompatButton>
@@ -68,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
+                android:textSize="16dp"
                 android:background="@drawable/custom_button"
                 android:text="Manage Volunteers">
             </androidx.appcompat.widget.AppCompatButton>
@@ -78,6 +81,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_button"
                 android:layout_marginTop="12dp"
+                android:textSize="16dp"
                 android:text="Manage Colleges">
             </androidx.appcompat.widget.AppCompatButton>
 
@@ -87,8 +91,19 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_button"
                 android:layout_marginTop="12dp"
-                android:layout_marginBottom="20dp"
+                android:textSize="16dp"
                 android:text="Manage Notifications">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnregisteruser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_button"
+                android:layout_marginTop="12dp"
+                android:textSize="16dp"
+                android:layout_marginBottom="20dp"
+                android:text="Registered Users">
             </androidx.appcompat.widget.AppCompatButton>
 
             <androidx.appcompat.widget.AppCompatButton
