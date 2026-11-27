@@ -1,5 +1,6 @@
 package com.example.festivehub;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -52,15 +53,27 @@ public class AdminDashboardActivity extends AppCompatActivity {
             Intent intent = new Intent(AdminDashboardActivity.this, ManageNotificationActivity.class);
             startActivity(intent);
         });
-        //logout
+
+        // Logout
         btnadminlogout = findViewById(R.id.btnadminlogout);
 
         btnadminlogout.setOnClickListener(view -> {
-            auth.signOut();
+            new AlertDialog.Builder(AdminDashboardActivity.this).setTitle("Logout")
+                    .setMessage("Are you sure you want to logout?")
+                    .setNegativeButton("Cancel", (dialog, which) -> {
+                        dialog.dismiss();
+                    })
+                    .setPositiveButton("Logout", (dialog, which) -> {
+                        auth.signOut();
 
-            Intent intent = new Intent(AdminDashboardActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
+                        Intent intent = new Intent(AdminDashboardActivity.this, MainActivity.class);
+
+                        //clear previous activities
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                        finish();
+                    })
+                    .show();
         });
     }
 }

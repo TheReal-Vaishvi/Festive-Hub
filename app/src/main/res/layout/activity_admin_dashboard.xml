@@ -87,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_button"
                 android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
                 android:text="Manage Notifications">
             </androidx.appcompat.widget.AppCompatButton>
 
@@ -94,8 +95,8 @@
                 android:id="@+id/btnadminlogout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_button"
-                android:layout_marginTop="32dp"
+                android:background="@drawable/custom_logout_button"
+                android:layout_marginTop="35dp"
                 android:text="Logout">
             </androidx.appcompat.widget.AppCompatButton>
 
