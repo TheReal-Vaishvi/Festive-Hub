@@ -21,7 +21,7 @@ public class EventDetailActivity extends AppCompatActivity {
     ImageView imgeventdetail;
     TextView txtbackevent, txteventtitle, txteventcategory, txteventdate, txteventtime, txteventlocation;
     TextView txtdescription;
-    Button btnregisterevent;
+    Button btnregisterevent, btnviewschedule;
     FirebaseAuth auth;
     FirebaseFirestore db;
     String eventId, title, date, imageUrl;
@@ -43,6 +43,19 @@ public class EventDetailActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
+
+        //schedule
+        btnviewschedule = findViewById(R.id.btnviewschedule);
+
+        btnviewschedule.setOnClickListener(v -> {
+            Intent intent = new Intent(EventDetailActivity.this, EventScheduleActivity.class);
+
+            intent.putExtra("eventId", getIntent().getStringExtra("eventId"));
+            intent.putExtra("eventTitle", getIntent().getStringExtra("eventTitle"));
+            intent.putExtra("eventDate", getIntent().getStringExtra("eventDate"));
+
+            startActivity(intent);
+        });
 
         Intent intent = getIntent();
 
@@ -79,6 +92,7 @@ public class EventDetailActivity extends AppCompatActivity {
                     android.R.drawable.ic_menu_gallery
             );
         }
+
         // Back button
         txtbackevent.setOnClickListener(v -> finish());
         // Register button

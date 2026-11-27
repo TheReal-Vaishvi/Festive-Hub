@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Internet permission -->
     <application
         android:name=".FestiveHubApp"
         android:allowBackup="true"
@@ -115,8 +114,13 @@
             android:name=".RegisteredUserActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".EventScheduleActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
+    <!-- Internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
